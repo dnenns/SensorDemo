@@ -1,7 +1,6 @@
 package com.example.android.sensordemo
 
 import android.content.Context
-import android.content.DialogInterface
 import android.graphics.Color
 import android.hardware.Sensor
 import android.hardware.SensorManager
@@ -12,7 +11,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.navigation.fragment.findNavController
 import com.example.android.sensordemo.databinding.FragmentSensorOverviewBinding

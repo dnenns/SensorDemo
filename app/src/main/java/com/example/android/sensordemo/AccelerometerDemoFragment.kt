@@ -43,10 +43,15 @@ class AccelerometerDemoFragment : Fragment() {
                 Log.i(LOG_TAG, "onSensorChange called")
                 var sensorValues = sensorEvent?.values
 
-                var x = sensorValues?.get(0)
-                var y = sensorValues?.get(1)
-                var z = sensorValues?.get(2)
+                var x = 0.0f
+                var y = 0.0f
+                var z = 0.0f
 
+                if (sensorValues != null && sensorValues.size >= 3) {
+                        x = sensorValues[0]
+                        y = sensorValues[1]
+                        z = sensorValues[2]
+                }
                 binding.x = x
                 binding.y = y
                 binding.z = z
@@ -67,15 +72,15 @@ class AccelerometerDemoFragment : Fragment() {
         }
 
         // Method 2 for retrieving a sensor
-        val sensor = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT)
-
-        if (sensor != null) {
-            sensorManager.registerListener(
-                sensorEventListener,
-                sensor,
-                SensorManager.SENSOR_DELAY_NORMAL
-            )
-        }
+//        val sensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
+//
+//        if (sensor != null) {
+//            sensorManager.registerListener(
+//                sensorEventListener,
+//                sensor,
+//                SensorManager.SENSOR_DELAY_NORMAL
+//            )
+//        }
 
         binding.continueButton.setOnClickListener {
             findNavController().navigate(R.id.lightSensorDemoFragment)
