@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SensorDemo</string>
+    <string name="button_continue">Continue</string>
+    <string name="x_value_text">x Coordinate: %s</string>
+    <string name="y_value_text">y Coordinate: %s</string>
+    <string name="z_value_text">z Coordinate: %s</string>
+    <string name="light_sensor_value_text">Light sensor: %s</string>
+</resources>

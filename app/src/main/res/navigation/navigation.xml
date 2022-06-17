@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/sensorOverviewFragment">
+    <fragment
+        android:id="@+id/sensorOverviewFragment"
+        android:name="com.example.android.sensordemo.SensorOverviewFragment"
+        android:label="SensorOverviewFragment" >
+        <action
+            android:id="@+id/action_sensorOverviewFragment_to_accelerometerDemoFragment"
+            app:destination="@id/accelerometerDemoFragment"
+            app:popUpTo="@id/sensorOverviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accelerometerDemoFragment"
+        android:name="com.example.android.sensordemo.AccelerometerDemoFragment"
+        android:label="AccelerometerDemoFragment" >
+        <action
+            android:id="@+id/action_accelerometerDemoFragment_to_lightSensorDemoFragment"
+            app:destination="@id/lightSensorDemoFragment"
+            app:popUpTo="@id/accelerometerDemoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lightSensorDemoFragment"
+        android:name="com.example.android.sensordemo.LightSensorDemoFragment"
+        android:label="fragment_light_sensor_demo"
+        tools:layout="@layout/fragment_light_sensor_demo" />
+</navigation>
